@@ -67,12 +67,10 @@ def forward_prop(x_in, w, b):
 
 
 
-def compute_cost(softmax_vector, labels):
-    eps = 1e-15
+def compute_cost(softmax_vector, labels, eps = 1e-15):
     rows = np.arange(len(labels))
     cols = labels
     x = softmax_vector[rows, cols]
-    
     loss = np.mean(-np.log(x + eps))
     return loss
 
