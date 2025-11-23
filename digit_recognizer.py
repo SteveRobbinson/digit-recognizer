@@ -9,8 +9,7 @@ test_set = test.to_numpy()
 train_set = training_set.to_numpy()
 
 def ReLU(x):
-    x = np.maximum(0, x)
-    return x
+    return np.maximum(0, x)
 
 
 
